@@ -1,14 +1,13 @@
 {
-  "name": "react-product-gallery",
-  "version": "0.1.0",
-  "description": "A mobile-responsive product gallery component",
+  "name": "react-products-gallery",
+  "version": "0.1.4",
+  "description": "A mobile-responsive products gallery component",
   "author": "Nicholas Song",
   "license": "ISC",
   "files": [
     "dist"
   ],
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/index.esm.js",
   "source": "src/index.js",
   "scripts": {
     "build": "rollup -c",
@@ -23,8 +22,8 @@
     "npm-run-all": "^4.1.5",
     "rollup": "^2.26.4",
     "rollup-plugin-delete": "^2.0.0",
-    "rollup-plugin-import-css": "^3.0.3",
-    "rollup-plugin-peer-deps-external": "^2.2.3"
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-styles": "^4.0.0"
   },
   "peerDependencies": {
     "react": "^17.0.2",

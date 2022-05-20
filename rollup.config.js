@@ -1,18 +1,15 @@
 import babel from '@rollup/plugin-babel';
 import external from 'rollup-plugin-peer-deps-external';
 import del from 'rollup-plugin-delete';
-import css from 'rollup-plugin-import-css';
+import styles from 'rollup-plugin-styles';
 
 import pkg from './package.json';
 
 export default {
   input: pkg.source,
-  output: [
-    { file: pkg.main, format: 'cjs' },
-    { file: pkg.module, format: 'esm' },
-  ],
+  output: [{ file: pkg.main, format: 'esm' }],
   plugins: [
-    css(),
+    styles({ mode: 'inject' }),
     external(),
     babel({
       exclude: 'node_modules/**',
