@@ -1,3 +1,76 @@
-h1 {
-  color: red;
+.rpa-wrapper {
+  display: flex;
+  position: relative;
+  height: 100%;
+  flex-direction: column;
+}
+
+.rpa-products {
+  flex: 1;
+  display: flex;
+  height: 0;
+  padding: 2px;
+  margin-top: 25px;
+  overflow-y: auto;
+  justify-content: center;
+}
+
+.rpa-products-message {
+  font-size: 20px;
+}
+
+.rpa-product-card-info {
+  flex: 1;
+  width: 0;
+  padding-right: 10px;
+}
+
+.rpa-product-detail {
+  flex: 1;
+  padding-left: 15px;
+}
+
+.rpa-product-detail-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rpa-section {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.rpa-section:last-child {
+  border-bottom: none;
+}
+
+.rpa-product-detail-content-image {
+  display: flex;
+  justify-content: center;
+}
+
+.rpa-product-detail-content-specs {
+  color: #555;
+}
+
+.rpa-product-detail-content-specs-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.rpa-product-detail-content-specs-items:after {
+  flex: 1;
+}
+
+.rpa-product-detail-content-specs-item {
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.rpa-product-detail-content-description {
+  color: #777;
+  font-size: 14px;
+  font-style: italic;
 }
