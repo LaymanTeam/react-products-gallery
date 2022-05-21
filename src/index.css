@@ -25,6 +25,25 @@
   padding-right: 10px;
 }
 
+.rpa-product-card-info>.rpa-product-name {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.rpa-product-card-info>.rpa-label {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+  line-height: 22px;
+}
+
+.rpa-product-card-info>.rpa-price {
+  font-size: 20px;
+}
+
 .rpa-product-detail {
   flex: 1;
   padding-left: 15px;
@@ -34,6 +53,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.rpa-product-detail-content-header>.rpa-product-name {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.rpa-card-subtitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .rpa-section {
@@ -67,6 +99,15 @@
 .rpa-product-detail-content-specs-item {
   text-align: center;
   padding: 10px 15px;
+}
+
+.rpa-product-detail-content-specs-item>.rpa-spec-value {
+  font-size: 20px;
+}
+
+.rpa-product-detail-content-specs-item>.rpa-spec-property {
+  margin-top: 12px;
+  font-size: 14px;
 }
 
 .rpa-product-detail-content-description {

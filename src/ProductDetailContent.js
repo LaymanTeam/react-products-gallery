@@ -8,16 +8,7 @@ const ProductDetailContent = React.memo(({ data, isMobile, onAddToCart }) => {
   return (
     <CardContent className='rpa-product-detail-content'>
       <div className='rpa-product-detail-content-header'>
-        <div
-          style={{
-            textTransform: 'uppercase',
-            fontSize: '22px',
-            fontWeight: 'bold',
-            paddingRight: '20px',
-          }}
-        >
-          {data.name}
-        </div>
+        <div className='rpa-product-name'>{data.name}</div>
         <IconButton size='large' color='primary' onClick={() => onAddToCart(data)}>
           <AddShoppingCartIcon />
         </IconButton>
@@ -27,17 +18,15 @@ const ProductDetailContent = React.memo(({ data, isMobile, onAddToCart }) => {
       </div>
       {specs.length > 0 && (
         <div className='rpa-product-detail-content-specs rpa-section'>
-          <div style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '10px' }}>
-            Specifications
-          </div>
+          <div className='rpa-card-subtitle'>Specifications</div>
           <div
             className='rpa-product-detail-content-specs-items'
             style={{ margin: isMobile ? 'initial' : '0 30px' }}
           >
             {specs.map((spec, index) => (
               <div key={index} className='rpa-product-detail-content-specs-item'>
-                <div style={{ fontSize: '20px' }}>{spec.value}</div>
-                <div style={{ marginTop: '15px', fontSize: '14px' }}>{spec.property}</div>
+                <div className='rpa-spec-value'>{spec.value}</div>
+                <div className='rpa-spec-property'>{spec.property}</div>
               </div>
             ))}
           </div>

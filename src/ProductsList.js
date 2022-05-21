@@ -29,21 +29,9 @@ const ProductCard = ({ product, isMobile, isSelected, onSelectCard, onAddToCart 
           }}
         >
           <div className='rpa-product-card-info'>
-            <div
-              style={{
-                textTransform: 'uppercase',
-                fontSize: '16px',
-                fontWeight: 'bold',
-                textOverflow: 'ellipsis',
-                overflow: 'hidden',
-              }}
-            >
-              {product.name}
-            </div>
-            <div style={{ fontSize: '14px', color: '#777', marginTop: '10px', lineHeight: '22px' }}>
-              Price
-            </div>
-            <div style={{ fontSize: '20px' }}>{`${product.currency}${product.price}`}</div>
+            <div className='rpa-product-name'>{product.name}</div>
+            <div className='rpa-label'>Price</div>
+            <div className='rpa-price'>{`${product.currency}${product.price}`}</div>
           </div>
           <ChevronRightIcon sx={iconStyle} />
         </CardContent>
