@@ -17,5 +17,4 @@ export default {
     }),
     del({ targets: ['dist/*'] }),
   ],
-  external: Object.keys(pkg.peerDependencies || {}),
 };

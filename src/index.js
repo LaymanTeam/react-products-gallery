@@ -65,14 +65,16 @@ const ProductsGallery = ({
     setActiveProduct(product);
   };
 
-  const filteredProducts = useMemo(
-    () => products.filter((p) => p.name.toLowerCase().indexOf(searchKeyword.toLowerCase()) > -1),
-    [products, searchKeyword],
-  );
+  const filteredProducts = useMemo(() => {
+    if (!Array.isArray(products)) return [];
+    return products.filter((p) => p.name.toLowerCase().indexOf(searchKeyword.toLowerCase()) > -1);
+  }, [products, searchKeyword]);
 
   const getProductsContent = () => {
-    if (products.length === 0) {
-      return <div className='rpa-products-message'>There are no items here</div>;
+    if (!Array.isArray(products)) {
+      return <nobr />;
+    } else if (products.length === 0) {
+      return <div className='rpa-products-message'>There are no items in here</div>;
     } else if (filteredProducts.length === 0) {
       return <div className='rpa-products-message'>No items match your search</div>;
     }
