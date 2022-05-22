@@ -14,7 +14,7 @@ const ProductDetailContent = React.memo(({ data, isMobile, onAddToCart }) => {
         </IconButton>
       </div>
       <div className='rpa-product-detail-content-image rpa-section'>
-        <img alt={data.name} src={data.image} height={260} />
+        <img alt={data.name} src={data.image} key={data.id} height={260} />
       </div>
       {specs.length > 0 && (
         <div className='rpa-product-detail-content-specs rpa-section'>
