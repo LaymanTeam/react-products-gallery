@@ -89,19 +89,19 @@
 .rpa-product-detail-content-specs-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: space-evenly;
 }
 
-.rpa-spec {
+.rpa-product-detail-content-specs-items>.rpa-spec {
   text-align: center;
-  padding: 10px 15px;
+  padding: 10px 18px;
 }
 
-.rpa-product-detail-content-specs-item>.rpa-spec-value {
+.rpa-spec>.rpa-spec-value {
   font-size: 20px;
 }
 
-.rpa-product-detail-content-specs-item>.rpa-spec-property {
+.rpa-spec>.rpa-spec-property {
   margin-top: 12px;
   font-size: 14px;
 }
