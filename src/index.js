@@ -22,8 +22,6 @@ const defaultCallbacks = {
   onAddToCart: (product) => {},
 };
 
-const SM_SCREEN_WIDTH = 768;
-
 const ProductsGallery = ({
   products = [],
   options = defaultOptions,
@@ -32,9 +30,10 @@ const ProductsGallery = ({
   const [searchKeyword, setSearchKeyword] = useState('');
   const [activeProduct, setActiveProduct] = useState(null);
 
+  const smScreenWidth = get(options, 'mobileWidth', 768);
   const wrapperRef = useRef();
   const { width } = useResizeDetector({ targetRef: wrapperRef });
-  const [isMobile, setIsMobile] = useState(width <= SM_SCREEN_WIDTH);
+  const [isMobile, setIsMobile] = useState(width <= smScreenWidth);
 
   const globalMuiTheme = createTheme({
     palette: {
@@ -52,7 +51,7 @@ const ProductsGallery = ({
   });
 
   useEffect(() => {
-    setIsMobile(width <= SM_SCREEN_WIDTH);
+    setIsMobile(width <= smScreenWidth);
   }, [width]);
 
   const onChangeKeyword = (name) => {
