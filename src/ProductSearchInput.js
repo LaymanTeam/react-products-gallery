@@ -7,12 +7,13 @@ const ProductSearchInput = ({
   keyword,
   autoFocus,
   placeholder,
+  debounceDelay,
   onChangeKeyword,
   onClearKeyword,
 }) => {
   const [name, setName] = useState(keyword);
 
-  const debounced = useCallback(debounce(onChangeKeyword, 500), []);
+  const debounced = useCallback(debounce(onChangeKeyword, debounceDelay), []);
 
   const onChange = (e) => {
     let value = e.target.value;

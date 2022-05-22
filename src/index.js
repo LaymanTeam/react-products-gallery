@@ -13,6 +13,8 @@ const defaultOptions = {
   autoSelectProduct: true,
   searchInputAutoFocus: false,
   searchInputPlaceholder: 'Find the product of your dreams',
+  mobileWidth: 768,
+  debounceDelay: 350,
 };
 
 const defaultCallbacks = {
@@ -30,7 +32,8 @@ const ProductsGallery = ({
   const [searchKeyword, setSearchKeyword] = useState('');
   const [activeProduct, setActiveProduct] = useState(null);
 
-  const smScreenWidth = get(options, 'mobileWidth', 768);
+  const smScreenWidth = get(options, 'mobileWidth', defaultOptions.mobileWidth);
+  const debounceDelay = get(options, 'debounceDelay', defaultOptions.debounceDelay);
   const wrapperRef = useRef();
   const { width } = useResizeDetector({ targetRef: wrapperRef });
   const [isMobile, setIsMobile] = useState(width <= smScreenWidth);
@@ -120,6 +123,7 @@ const ProductsGallery = ({
               'searchInputPlaceholder',
               defaultOptions.searchInputPlaceholder,
             )}
+            debounceDelay={debounceDelay}
             onChangeKeyword={onChangeKeyword}
             onClearKeyword={callbacks.onClearSearch}
           />
