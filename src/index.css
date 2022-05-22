@@ -89,14 +89,10 @@
 .rpa-product-detail-content-specs-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
 }
 
-.rpa-product-detail-content-specs-items:after {
-  flex: 1;
-}
-
-.rpa-product-detail-content-specs-item {
+.rpa-spec {
   text-align: center;
   padding: 10px 15px;
 }
