@@ -50,7 +50,7 @@ render() {
 #### Options
 |Name                   |Type           |Default        |Description
 |-----------------------|---------------|---------------|------------------------------------------------------
-|products               |`array`        |`{}`           |Inline style object for the top-level wrapper element
+|wrapperStyles          |`object`       |`{}`           |Inline style object for the top-level wrapper element
 |autoSelectProduct      |`boolean`      |`true`         |If `true`, the first product will be selected by default upon data load and search.
 |searchInputAutoFocus   |`boolean`      |`false`        |If `true`, search field will be focused by default upon initialization of the component.
 |searchInputPlaceholder |`string`       |`"Find the product of your dreams"` |Placeholder text for the search field.
