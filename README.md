@@ -55,7 +55,7 @@ render() {
 |searchInputAutoFocus   |`boolean`      |`false`        |If `true`, search field will be focused by default upon initialization of the component.
 |searchInputPlaceholder |`string`       |`"Find the product of your dreams"` |Placeholder text for the search field.
 |mobileWidth            |`number`       |768            |The boundary width of the component (in pixels) where it turns into mobile-friendly UI.
-|debounceDelay          |`number`       |350            |The debounce delay of the search result (in milliseconds) to become effective.
+|debounceDelay          |`number`       |350            |The debounce delay for the search result (in milliseconds) to become effective.
 
 #### Callbacks
 |Name                   |Type           |Parameters           |Description
